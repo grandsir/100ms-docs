@@ -42,12 +42,12 @@ Get the HMSBroadcastExtensionSDK via [Cocoapods](https://cocoapods.org/). Add th
 
 ## How to use HMSBroadcastExtensionSDK to share iOS screen with other participants in the room?
 
-iOS broadcast extension provides you with CMSampleBuffers that you can process using HMSBroadcastExtensionSDK. This enabled you to share the screen with other participants in the room in your main app that uses HMSSDK.
+iOS broadcast extension provides you CMSampleBuffers that you can process using HMSBroadcastExtensionSDK. This enables you to share the screen with other participants in the room in your main app that uses HMSSDK.
 
-## How to create Replaykit Broadcast extension?
+## How to create ReplayKit Broadcast extension?
 
 1. Create a Broadcast Upload Extension target that is embedded in your app project target.
-2. You create a subclass of RPBroadcastSampleHandler and override the processSampleBuffer function. This gives you access to the CMSampleBuffer provided by the Replaykit framework.
+2. You create a subclass of RPBroadcastSampleHandler and override the processSampleBuffer function. This gives you access to the CMSampleBuffer provided by the ReplayKit framework.
 
 ## How to configure your main app and extension to enable screen sharing
 
@@ -81,7 +81,7 @@ iOS broadcast extension provides you with CMSampleBuffers that you can process u
   
 ## How to share the screen in meeting
 
-  In your Broadcast Extension, you create a subclass of RPBroadcastSampleHandler class. This class handles screen frame samples produced by Replaykit. Replaykit delivers these frames as CMSampleBuffer to processSampleBuffer function.
+  In your Broadcast Extension, you create a subclass of RPBroadcastSampleHandler class. This class handles screen frame samples produced by ReplayKit. ReplayKit delivers these frames as CMSampleBuffer to processSampleBuffer function.
   
 In your processSampleBuffer function call process function on your screenRenderer instance passing the CMSampleBuffer like below:
   
